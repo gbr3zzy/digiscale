@@ -1,17 +1,28 @@
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//Screens
+import AgeSelect from './App/Authentication/AgeSelect/AgeSelect'
+import Signup from './App/Authentication/Signup/Signup'
+import Dashboard from './App/Home/Dashboard/Dashboard'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function Routes() {
+  return (
+    <Router>
+      <div>
+        <div className="container">
+          <Route exact path="/" component={AgeSelect} />
+          <Route exact path="/Signup" component={Signup} />
+          <Route exact path="/Dashboard" component={Dashboard} />
+
+
+        </div>
+      </div>
+    </Router>
+  );
+}
+
+ReactDOM.render(<Routes />, document.getElementById('root'));

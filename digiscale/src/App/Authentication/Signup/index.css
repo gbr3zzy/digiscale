@@ -1,0 +1,29 @@
+input[type="text"], textarea {
+  font-size:20px;
+    background-color : transparent; 
+    border:0;
+    border-bottom: 1px solid gray;
+    text-align: center;
+  
+  }
+  .btnSignUp {
+ 
+
+    color: white;
+    cursor: pointer;
+    border:1px solid white;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  border-radius: 10px;
+ 
+ 
+   }
+   
+  .inputWrap{
+    margin-top: 20px;
+  }
+  .btnText{
+color: red;
+  }

@@ -1,0 +1,35 @@
+.App {
+    text-align: center;
+  }
+body {
+
+    background-color: #000000;
+    
+    }
+  .hStyle {
+color:#168000;
+    }
+
+  .btnChoice {
+ 
+
+   color: white;
+   cursor: pointer;
+   border: solid #168000;
+   padding-top: 10px;
+   padding-right: 10px;
+   padding-bottom: 10px;
+   padding-left: 10px;
+ border-radius: 10px;
+
+
+  }
+  .btnWrap{
+    text-align: center;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
