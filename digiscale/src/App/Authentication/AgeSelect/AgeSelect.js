@@ -1,14 +1,16 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 const AgeSelect = (props) => {
     const history = useHistory();
 
     return (
-        <div className="App" >
+        // <div className="container">
+        <div className="mainContainer App" >
             <h1 className="hStyle">DigiScale</h1>
             <h2 className="hStyle">Are you over 21 years age</h2>
-            <div className="container">
+            <div className="mainContainer">
                 <p onClick={() => history.push('/Signup')} className="btnChoice">
                     Yes
             </p>
@@ -18,7 +20,7 @@ const AgeSelect = (props) => {
             </div>
 
         </div>
-
+        // </div>
     );
 };
 

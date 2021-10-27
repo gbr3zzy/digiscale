@@ -13,7 +13,7 @@ function Routes() {
   return (
     <Router>
       <div>
-        <div className="container">
+        <div >
           <Route exact path="/" component={AgeSelect} />
           <Route exact path="/Signup" component={Signup} />
           <Route exact path="/Dashboard" component={Dashboard} />

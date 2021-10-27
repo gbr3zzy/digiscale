@@ -1,0 +1,86 @@
+.mainColor {
+  color: #168000;
+}
+.mainContainer {
+  margin-top: 80px;
+  background-color: #202020;
+  height: 100%;
+ 
+}
+.flexWrap {
+  margin-top: 10px;
+  width: 100%;
+}
+.imgcard {
+  flex: 1px;
+
+  margin-top:auto;
+  margin-bottom:auto;
+  text-align:center;
+}
+
+body {
+  height: 100%;
+  background-color: #202020;
+}
+
+.cardBorder {
+  margin-left: 2%;
+  width: 30%;
+  margin-top: 5%;
+  color: white;
+  text-align: center;
+  align-self: center;
+  border-width: 1px;
+  border-style: double;
+  border-color: #168000;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.mainLocationContainer {
+  /* margin-top: 80px; */
+  background-color: #202020;
+  height: 100%;
+}
+
+.dropdwonbtn {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.imgLocationcard {
+
+   flex: 1px;
+
+   margin-top:auto;
+   margin-bottom:auto;
+   text-align:center;
+}
+.cardLocationBorder {
+  width: 45%;
+  color: white;
+  text-align: center;
+  align-self: center;
+  border-width: 1px;
+  border-style: double;
+  border-color: #168000;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* .imgProduct {
+  height: 100%;
+  width: 50%;
+  border-radius: 10px;
+  margin-left: 35%;
+}
+*/
+.imgLocation {
+  height: 60%;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  /* margin-left: 35%; */
+} 
