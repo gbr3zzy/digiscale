@@ -3,8 +3,8 @@ import "./Dashboard.css";
 import Navbar from "../components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "../screens/Home";
-import Location from "../screens/Location";
-import Products from "../screens/Products";
+import Location from "../screens/Locations/Location";
+import Products from "../screens/Products/Products";
 
 function Dashboard() {
   return (

@@ -1,0 +1,46 @@
+.dropdownLocationdiv{
+    height: 35px;
+}
+
+.del{
+  margin-top: 10px;
+    width: 100%;
+    display: flex; 
+    
+    
+   
+}
+
+.dropdownProductdiv{
+    height: 35px;
+    width: 100%;
+    display: flex; 
+    justify-content: flex-end
+}
+
+.dropdownProduct{
+    width: 150px;
+    border-radius: 20px;
+    background-color: dimgrey;
+    border-color: dimgrey;
+    text-align: center;
+    color: white;
+}
+
+.dropdownLocation{
+    width: 100%;
+    border-radius: 20px;
+    background-color:dimgrey;
+    border-color: dimgrey;
+    text-align: center;
+    color: white;
+}
+
+.colItem{
+    flex: 1px;
+    justify-content: center;
+    align-items: center;
+}
+.whiteText{
+   color: white;
+}

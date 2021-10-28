@@ -1,8 +1,13 @@
 import React from "react";
-
-function Dropdown(props) {
+import "../screens/index.css";
+const Dropdown = (props) => {
+    console.log('pros', props);
+    const selectValue = (e) => {
+        props.onchange(e);// can pass callback data here
+    }
     return <>
-        <select  {...props}>
+        <select onChange={(e) => selectValue(e.target.value)}
+            {...props}>
             {props.options &&
                 props.options.map(o =>
                     <option key={o.key} value={o.key}>
