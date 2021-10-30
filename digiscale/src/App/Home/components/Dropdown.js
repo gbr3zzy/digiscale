@@ -1,5 +1,5 @@
 import React from "react";
-import "../screens/index.css";
+import "./index.css";
 const Dropdown = (props) => {
     console.log('pros', props);
     const selectValue = (e) => {
@@ -10,8 +10,8 @@ const Dropdown = (props) => {
             {...props}>
             {props.options &&
                 props.options.map(o =>
-                    <option key={o.key} value={o.key}>
-                        {o.text}</option>)
+                    <option key={o.key} value={o.key} className="dropdownView">
+                        {o.text} {o.price}</option>)
             }
         </select>
     </>;

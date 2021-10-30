@@ -1,0 +1,30 @@
+.TipDeleveryMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.PlaceOrderText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:green;
+}
+
+.btnTipNO{
+    background-color: red;
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TipAmountDetail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 30px;
+}

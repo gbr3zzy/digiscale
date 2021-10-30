@@ -1,0 +1,69 @@
+.flexWrap {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+.scrolImage{
+    display: flex;
+    width: 100%;
+  flex-direction: row;
+  overflow: auto;
+}
+
+.crossIcon{
+    margin-top: 30px;
+}
+
+.lessIcon{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.addIcon{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.priceDetail{
+    color: white;
+    text-align: center;
+    align-self: center;
+    border-radius: 10px;
+}
+
+.btnStreetAdress{
+    background-color: slategrey;
+    border-radius: 30px;
+    color: white;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.totalPrice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+.PlaceOrderdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.btnPlaceOrder{
+    background-color: green;
+    width: 50%;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

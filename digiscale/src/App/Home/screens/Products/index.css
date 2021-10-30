@@ -1,3 +1,7 @@
+.flexWrap {
+    margin-top: 10px;
+    width: 100%;
+  }
 .dropdownLocationdiv{
     height: 35px;
 }
@@ -6,10 +10,49 @@
   margin-top: 10px;
     width: 100%;
     display: flex; 
-    
-    
-   
 }
+
+.imgLocationcard {
+    flex: 1px;
+    margin-top:auto;
+    margin-bottom:auto;
+    text-align:center;
+ }
+
+ .mainContainer {
+    margin-top: 80px;
+    background-color: #202020;
+    height: 100%;
+   
+  }
+
+ .cardLocationBorder {
+    color: white;
+    text-align: center;
+    align-self: center;
+    border-width: 1px;
+    border-style: double;
+    border-color: #168000;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .mainColorBg{
+    background-color: #168000;
+  }
+
+ .imgLocation {
+  
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    /* margin-left: 35%; */
+  } 
+
+  .margin-10{
+    margin: 10px;
+  }
 
 .dropdownProductdiv{
     height: 35px;
@@ -43,4 +86,26 @@
 }
 .whiteText{
    color: white;
+}
+.changeimgrow{
+    width: 100%;
+}
+
+.centerItem{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.textShow{
+    background-color:gray;
+    color: white;
+    text-align: center;
+}
+
+.scrolImage{
+    display: flex;
+    width: 100%;
+  flex-direction: row;
+  overflow: auto;
 }
