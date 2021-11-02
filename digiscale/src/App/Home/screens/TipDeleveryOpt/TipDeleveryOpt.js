@@ -22,18 +22,18 @@ const TipDeleveryOpt = (props) => {
 
     return (
         <div className="container-fluid mainContainer TipDeleveryMain">
+            <div className="col-12 full-height">
+                <div className="col-12 flexWrap labelDiv">
+                    Digiscale
+                </div >
+                <div onClick={() => TipDeleveryYesOrNo('yes')} className="col-12 flexWrap btnDeleveryDriver">
+                    <div className="btnPlaceOrder">Tip Your Delevery Driver</div>
+                </div >
 
-            <div className="col-12 flexWrap PlaceOrderText">
-                Digiscale
-            </div >
-            <div onClick={() => TipDeleveryYesOrNo('yes')} className="col-12 flexWrap PlaceOrderdiv">
-                <div className="btnPlaceOrder">Tip Your Delevery Driver</div>
-            </div >
-
-            <div onClick={() => TipDeleveryYesOrNo('no')} className="col-12 flexWrap PlaceOrderdiv">
-                <div className="btnTipNO">No</div>
-            </div >
-
+                <div onClick={() => TipDeleveryYesOrNo('no')} className="col-12 flexWrap btnDeleveryDriver">
+                    <div className="btnTipNO">No</div>
+                </div >
+            </div>
         </div>
     );
 };

@@ -17,12 +17,42 @@ justify-content: start;
   align-items: center; */
 }
 
+.shoppingBagDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoutDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.IconShoppingBaskit{
+  color:white;
+  background-color: green;
+  border-radius: 20px;
+}
+
+label{
+  display: inline;
+}
+
 .menu-bars {
-  margin-left: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.menu-bar-Icon{
   font-size: 2rem;
   background: none;
   color:white;
 }
+
 .menu-bars-header {
   
   font-size: 2rem;
@@ -46,7 +76,9 @@ justify-content: start;
   left: 0;
   transition: 350ms;
 }
-
+.white-color{
+  color: white;
+}
 .nav-text {
   display: flex;
   justify-content: start;
@@ -73,6 +105,7 @@ justify-content: start;
   border-radius: 15px;
   border-width: 0px;
     height: 40px;
+    width: 150px;
   padding: 5px 5px 5px 5px;
     color: rgb(255, 255, 255);
 }

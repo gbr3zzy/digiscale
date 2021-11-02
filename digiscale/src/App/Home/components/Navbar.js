@@ -4,28 +4,39 @@ import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { SidebarData } from './SideMenuData';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useSelector, useDispatch } from 'react-redux';
 import './Navbar.css';
 
 function Navbar() {
     const [sidebar, setSidebar] = useState(false);
-
+    const data = useSelector(state => state);
     const showSidebar = () => setSidebar(!sidebar);
+
+    console.log('data', data.selectedProduct.length);
 
     return (
         <>
             <div className='navbar'>
 
-                <div className="col-4">
-                    <Link to='#' className='menu-bars'>
+                <div className="col-2 menu-bars">
+                    <Link to='#' className="menu-bar-Icon">
                         <FaIcons.FaBars onClick={showSidebar} />
                     </Link>
                 </div>
-                <div class="col-4 container justify-content-center">
+                <div class="col-6 container justify-content-center">
 
                     <button className='navbar-btn'>Self Destruct</button>
 
                 </div>
-                <div className="col-4"></div>
+                <div className="col-2 shoppingBagDiv">
+                    <FaIcons.FaShoppingBasket size={30} color={'yellow'} />
+                    <label className="IconShoppingBaskit">{data.selectedProduct.length}</label>
+
+
+                </div>
+                <div className="col-2 logoutDiv">
+                    <FaIcons.FaSignOutAlt size={30} color={'lightgreen'} />
+                </div>
 
             </div>
 

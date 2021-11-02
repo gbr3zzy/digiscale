@@ -5,7 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import image from "../../../Assets/blueDream.jpg";
 import { useHistory, useLocation } from "react-router-dom";
 import Icon, { FontAwesome, Feather } from 'react-web-vector-icons';
-
+import { update_user_request } from '../../../../store/actions';
+import { useSelector, useDispatch } from 'react-redux';
+import * as FaIcons from 'react-icons/fa';
 const dataImage = [
     {
         key: '1',
@@ -63,9 +65,8 @@ const dataImage = [
 
 
     PlaceOrder = (props) => {
-
-        console.log('props Place Order', props);
-
+        const dispatch = useDispatch();
+        const data = useSelector(state => state);
         const [locationData, setLocationData] = useState(props.location.state.detail)
         const [price, setprice] = useState(props.location.state.price);
         const [buyProduct, setbuyProduct] = useState(false);
@@ -75,10 +76,16 @@ const dataImage = [
         }
 
         const TipDelevery = () => {
+
+            dispatch(update_user_request("Hello from redux store"));
+
             props.history.push({
                 pathname: '/TipDeleveryOpt',
             })
+
         }
+
+
 
 
 
@@ -96,38 +103,26 @@ const dataImage = [
 
         return (
             <div className="container-fluid mainContainer">
-                <div className="row col-12 flexWrap">
-                    <div className="col-1 crossIcon" >
-                        <FontAwesome
-                            name='bell'
-                            color='white'
-                            size={30}
-                        />
+                <div className="row col-12 flexWrapRow">
+                    <div className="col-2 crossIcon" >
+                        <FaIcons.FaWindowClose size={30} color={'green'} />
                     </div>
-                    <div className="col-4" >
+                    <div className="col-4 imgLocationcard" >
                         <img className="imgLocation" src={locationData.name} />
                     </div>
-                    <div className="col-3 imgLocationcard cardLocationBorder">
+                    <div className="col-3 productNameCard">
                         <div >{locationData.price}</div><div>{locationData.phone}</div>
                         <div>{locationData.rating}</div>
                     </div>
                     <div className="col-1 lessIcon" >
-                        <FontAwesome
-                            name='bell'
-                            color='red'
-                            size={30}
-                        />
+                        <FaIcons.FaMinusCircle size={30} color={'red'} />
                     </div>
                     <div className="col-1 addIcon" >
-                        <FontAwesome
-                            name='bell'
-                            color='green'
-                            size={30}
-                        />
+                        <FaIcons.FaPlusCircle size={30} color={'green'} />
                     </div>
 
                 </div >
-                <div className="col-12 flexWrap">
+                <div className="col-12 flexWrapRow">
 
                     <div className="col-12 imgLocationcard priceDetail">
                         <div >{locationData.price}</div>
@@ -141,17 +136,17 @@ const dataImage = [
 
 
                 </div >
-                <div className="col-12 flexWrap btnStreetAdress">
+                <div className="col-12 flexWrapRow btnStreetAdress">
                     Street Address
                 </div >
-                <div className="col-12 flexWrap totalPrice">
+                <div className="col-12 flexWrapRow totalPrice">
                     Total {price.price}
                 </div >
-                <div className="col-12 flexWrap PlaceOrderdiv">
+                <div className="col-12 flexWrapRow PlaceOrderdiv">
                     <div onClick={() => TipDelevery()} className="btnPlaceOrder">Place Order</div>
                 </div >
                 <div className="container-fluid col-12">
-                    <div className="flexWrap ">
+                    <div className="flexWrapRow ">
                         <div className="scrolImage">
                             {ListItemImage}
                         </div>

@@ -9,17 +9,14 @@ const ThankYouScreen = (props) => {
 
     return (
         <div className="container-fluid mainContainer TipDeleveryMain">
-
-            <div className="col-12 flexWrap PlaceOrderText">
-                Digiscale
-            </div >
-            <div className="col-12 flexWrap PlaceOrderdiv">
-                <div className="btnPlaceOrder">Tip Your Delevery Driver</div>
-            </div >
-
-            <div className="col-12 flexWrap PlaceOrderdiv">
-                <div className="btnTipNO">No</div>
-            </div >
+            <div className="full-height">
+                <div className="col-12 flexWrap labeldiv">
+                    Digiscale
+                </div >
+                <div className="col-12 flexWrap btnDiv">
+                    <div className="btnThankyou">Thank You</div>
+                </div >
+            </div>
 
         </div>
     );

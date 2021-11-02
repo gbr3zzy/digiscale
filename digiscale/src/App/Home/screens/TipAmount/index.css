@@ -11,20 +11,47 @@
     color:green;
 }
 
-.btnTipNO{
-    background-color: red;
-    width: 50%;
-    height: 40px;
-    border-radius: 20px;
+
+
+
+.TipAmountDetail{
     display: flex;
+    height: 200px;
     justify-content: center;
     align-items: center;
 }
 
-.TipAmountDetail{
+.AmountItems{
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+
+.full-height{
+    height: 100vh;
+}
+
+.labelDiv{
+    margin-top: 100px;
+    color: green;
+    font-size: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    margin-bottom: 30px;
+}
+.priceFont{
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+.labelCustomDiv{
+    margin-top: 10px;
+    color:white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

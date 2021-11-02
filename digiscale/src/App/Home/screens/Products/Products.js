@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import image from "../../../Assets/blueDream.jpg";
 import { useHistory, useLocation } from "react-router-dom";
 import Icon, { FontAwesome, Feather } from 'react-web-vector-icons';
+import * as FaIcons from 'react-icons/fa';
 
 const options = [
     { key: "loc2", text: "Hamiltons Goods" },
@@ -213,21 +214,13 @@ const dataImage = [
                             </div>
                             <div className="row col-12 flexWrap">
                                 <div onClick={() => previousImage()} className="col-2 centerItem">
-                                    <FontAwesome
-                                        name='bell'
-                                        color='white'
-                                        size={30}
-                                    />
+                                    <FaIcons.FaAngleLeft size={30} color={'green'} />
                                 </div>
 
                                 <div className="col-2 whiteText centerItem">{imageindex + "/" + totalimage}</div>
 
                                 <div onClick={() => nextImage()} className="col-2 centerItem">
-                                    <FontAwesome
-                                        name='bell'
-                                        color='white'
-                                        size={30}
-                                    />
+                                    <FaIcons.FaAngleRight size={30} color={'green'} />
                                 </div>
                             </div>
                             <div className="col-12 flexWrap">

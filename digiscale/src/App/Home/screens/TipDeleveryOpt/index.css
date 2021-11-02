@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+
+.full-height{
+    height: 100vh;
+}
 .PlaceOrderText{
     display: flex;
     align-items: center;
@@ -13,10 +17,35 @@
 
 .btnTipNO{
     background-color: red;
-    width: 50%;
+    width: 80%;
     height: 40px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.btnPlaceOrder{
+    background-color: green;
+    width: 80%;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.labelDiv{
+    margin-top: 100px;
+    color: green;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnDeleveryDriver{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 50px;
 }

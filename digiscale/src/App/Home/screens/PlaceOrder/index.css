@@ -1,4 +1,4 @@
-.flexWrap {
+.flexWrapRow {
     margin-top: 10px;
     width: 100%;
   }
@@ -11,17 +11,19 @@
 }
 
 .crossIcon{
-    margin-top: 30px;
+    text-align: center;
+    align-self: center;
 }
 
 .lessIcon{
+    margin-right: 5px;
     text-align: center;
-    margin-top: 30px;
+    align-self: center;
 }
 
 .addIcon{
     text-align: center;
-    margin-top: 30px;
+    align-self: center;
 }
 
 .priceDetail{
@@ -66,4 +68,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.productNameCard{
+    color: white;
+    text-align: center;
+    align-self: center;
+    border-width: 1px;
+    border-style: double;
+    border-color: #168000;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
 }
