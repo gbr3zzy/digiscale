@@ -28,6 +28,11 @@ export const SidebarData = [
     cName: "nav-text",
   },
   {
+    title: "Digiscale Delivery",
+    path: "/Pickups",
+    cName: "nav-text",
+  },
+  {
     title: "Digiscale Partners",
     path: "/products",
     cName: "nav-text",

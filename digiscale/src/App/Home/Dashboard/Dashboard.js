@@ -9,6 +9,7 @@ import PlaceOrder from '../screens/PlaceOrder/PlaceOrder'
 import TipDeleveryOpt from '../screens/TipDeleveryOpt/TipDeleveryOpt';
 import TipAmount from '../screens/TipAmount/TipAmount';
 import ThankYouScreen from '../screens/ThankYouScreen/ThankYouScreen';
+import Pickups from '../screens/DigiscaleDelivery/Pickups/Pickups';
 
 function Dashboard() {
   return (
@@ -23,6 +24,9 @@ function Dashboard() {
           <Route path="/TipDeleveryOpt" component={TipDeleveryOpt} />
           <Route path="/TipAmount" component={TipAmount} />
           <Route path="/ThankYouScreen" component={ThankYouScreen} />
+
+          {/* { digiscale Delivery } */}
+          <Route path="/Pickups" component={Pickups} />
         </Switch>
       </Router>
     </>
