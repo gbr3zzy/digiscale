@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import image from "../../../Assets/blueDream.jpg";
 import { useHistory, useLocation } from "react-router-dom";
 import Icon, { FontAwesome, Feather } from 'react-web-vector-icons';
+import { useSelector, useDispatch } from 'react-redux';
+import { selected_products } from '../../../../store/actions';
 import * as FaIcons from 'react-icons/fa';
 
 const options = [
@@ -14,9 +16,9 @@ const options = [
 
 const ProjectsTypes = [
     { key: "all", text: "All Products" },
-    { key: "flw", text: "Flower" },
-    { key: "nonflw", text: "Non-Flower" },
-    { key: "mis", text: "Miscellaneous" },
+    { key: "Flower", text: "Flower" },
+    { key: "Non Flower", text: "Non-Flower" },
+    { key: "Miscellaneous Products", text: "Miscellaneous" },
 ];
 
 const optionsBuyProduct = [
@@ -110,16 +112,21 @@ const dataImage = [
 
 
     Products = (props) => {
+        const dispatch = useDispatch();
         const [locationData, setLocationData] = useState(props.location.state.detail)
         const [selectedProduct, setselectedProduct] = useState();
         const [buyProduct, setbuyProduct] = useState(false);
         const [imageindex, setimageindex] = useState(1);
         const [totalimage, settotalimage] = useState(3);
+        const [listItems, setlistItems] = useState([])
 
         const PlaceOrder = (id) => {
             let priceindex = optionsBuyProduct.findIndex(obj => obj.key === id);
             let pricedata = optionsBuyProduct[priceindex];
             console.log('log data', props)
+
+            dispatch(selected_products(data[selectedProduct]))
+
             props.history.push({
                 pathname: '/PlaceOrder',
                 state: { detail: data[selectedProduct], price: pricedata }
@@ -135,8 +142,42 @@ const dataImage = [
         }
 
 
-        const selectedValue = (value) => {
+        const selectedValue = async (value) => {
+            console.log('value', value);
+            const list = await data.map((d) => {
 
+                if (value === d.productType) {
+                    return (
+                        <div onClick={() => selectItemForBuy(d.id)} className="row flexWrap">
+
+                            <div className="col imgLocationcard">
+                                <img className="imgLocation" src={d.name} />
+                            </div>
+                            <div className="col cardLocationBorder"><div>{d.price}</div></div>
+                            <div className="col cardLocationBorder"><div>{d.price}</div></div>
+
+                        </div>
+                    )
+
+                }
+
+                if (value == 'all') {
+                    return (
+                        <div onClick={() => selectItemForBuy(d.id)} className="row flexWrap">
+
+                            <div className="col imgLocationcard">
+                                <img className="imgLocation" src={d.name} />
+                            </div>
+                            <div className="col cardLocationBorder"><div>{d.price}</div></div>
+                            <div className="col cardLocationBorder"><div>{d.price}</div></div>
+
+                        </div>
+                    )
+                }
+
+            });
+
+            setlistItems(list);
         }
 
         const selectItemForBuy = (id) => {
@@ -149,18 +190,7 @@ const dataImage = [
             return data.findIndex(obj => obj.id === id);
         }
 
-        const listItems = data.map((d) => (
 
-            <div onClick={() => selectItemForBuy(d.id)} className="row flexWrap">
-
-                <div className="col imgLocationcard">
-                    <img className="imgLocation" src={d.name} />
-                </div>
-                <div className="col cardLocationBorder"><div>{d.price}</div></div>
-                <div className="col cardLocationBorder"><div>{d.price}</div></div>
-
-            </div>
-        ));
 
         const ListItemImage = dataImage.map((b) => (
             <figure id="figure">
@@ -173,6 +203,23 @@ const dataImage = [
 
             </figure>
         ))
+
+        useEffect(() => {
+            const list = data.map((d) => (
+
+                <div onClick={() => selectItemForBuy(d.id)} className="row flexWrap">
+
+                    <div className="col imgLocationcard">
+                        <img className="imgLocation" src={d.name} />
+                    </div>
+                    <div className="col cardLocationBorder"><div>{d.price}</div></div>
+                    <div className="col cardLocationBorder"><div>{d.price}</div></div>
+
+                </div>
+            ));
+
+            setlistItems(list);
+        }, [])
 
         return (
             <div className="container-fluid mainContainer">

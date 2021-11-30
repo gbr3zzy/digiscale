@@ -10,6 +10,8 @@ import TipDeleveryOpt from '../screens/TipDeleveryOpt/TipDeleveryOpt';
 import TipAmount from '../screens/TipAmount/TipAmount';
 import ThankYouScreen from '../screens/ThankYouScreen/ThankYouScreen';
 import Pickups from '../screens/DigiscaleDelivery/Pickups/Pickups';
+import PickupDetails from '../screens/DigiscaleDelivery/PickupDetails/PickupDetails';
+import PreviousPickups from '../screens/DigiscaleDelivery/PreviousPickups/PreviousPickups';
 
 function Dashboard() {
   return (
@@ -27,8 +29,11 @@ function Dashboard() {
 
           {/* { digiscale Delivery } */}
           <Route path="/Pickups" component={Pickups} />
+          <Route path="/PickupDetails" component={PickupDetails} />
+          <Route path="/PreviousPickups" component={PreviousPickups} />
         </Switch>
       </Router>
+
     </>
   );
 }

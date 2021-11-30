@@ -1,0 +1,251 @@
+.mainPickupContainer{
+    display: flex;
+    
+    margin-top: 80px;
+    background-color: #202020;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    }
+    
+    .full-height{
+        height: 100vh;
+    
+    }
+    
+    .PickupView{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .Pickup{
+    width: 95%;
+    background-color: gray;
+    border-radius: 10px;
+    height: 200px;
+    text-align: center;
+    
+    }
+    
+    /* .btnPreviousPickupView{
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .btnPreviousPickup{
+        width: 95%;
+    background-color: gray;
+    border-radius: 10px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    } */
+    
+    .googlemapView{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
+    .googlemap{
+        width: 95%;
+    }
+/*     
+    .ItemlistView{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    
+    } */
+    
+    .rowView{
+        width: 95%;
+        flex-wrap: inherit;
+    }
+    
+    .flowerdiv{
+        color: green;
+        font-size: 18px;
+    }
+    
+    /* .bulletFlower{
+        background-color: green;
+        height: 25px;
+        width: 15px;
+        border-radius: 15px;
+    } */
+
+    .lablediv{
+        width: 100%;
+        color: white;
+        align-self: center;
+        font-size: 11px;
+    }
+    .btnPickupView{
+        margin-top:10px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btnPickup{
+        height: 60px;
+        width: 90%;
+        border-width: 2px;
+        border-color: green;
+        border-style: double;
+        border-radius: 2px;
+        color: white;
+        font-size: 18px;
+    }
+
+    .PickupViewDetails{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .PickupDetails{
+        height: 100px;
+        width: 90%;
+        border-color: green;
+        border-style: solid;
+        border-radius: 2px;
+        margin-top: -3px;
+    }
+
+    .btnCall{
+        height: 25px;
+        width: 60px;
+        background-color: yellow;
+        border-radius: 10px;
+        margin-left: 20px;
+        color: green;
+    }
+
+    .btnCancel{
+        height: 25px;
+        width: 70px;
+        background-color: red;
+        border-radius: 10px;
+        margin-right: 20px;
+        color: white;
+    }
+
+    .btnrow{
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .btnDetailsPickups{
+        
+        height: 25px;
+        width: 70px;
+        background-color:black;
+        border-radius: 10px;
+        color: white;
+        
+    }
+
+    .btnDetailsPickupsView{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lableforDetailPickupdiv{
+        width: 100%;
+        color: green;
+        align-self: center;
+        font-size: 13px;
+    }
+
+    .forDetailPickupView{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .forDetailPickupblock{
+        height: 160px;
+        width: 90%;
+        border-width: 2px;
+        border-color: green;
+        border-style: double;
+        border-radius: 2px;
+    }
+
+    .forDetailAddress{
+        color: white;
+        font-size: 13px;
+    }
+
+    .btnforDetailsPickupsView{
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btnforDetailsPickups{
+        height: 25px;
+        width: 70px;
+        background-color:black;
+        border-radius: 10px;
+        color: white;
+    }
+
+    .forDetailIcon{
+        margin-top: 20px;
+    }
+
+    .forDetailIDNumber{
+        margin-top: 15px;
+        color: white;
+    }
+
+    .forDeleverdView{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .forDeleverdblock{
+        margin-top: 10px;
+        height: 175px;
+        width: 90%;
+        border-width: 2px;
+        border-color: green;
+        border-style: double;
+        border-radius: 2px;
+    }
+
+    .forDeleverdOrderDetails{
+        margin-top: 15px;
+        color:white;
+    }
+
+    .forDeleverdbtnrow{
+        justify-content: space-between;
+        margin-top: 80px;
+    }
+
+    .btnDeleverd{
+        height: 25px;
+        width: 90px;
+        background-color: green;
+        border-radius: 10px;
+        margin-right: 20px;
+        color: white;
+    }
+    

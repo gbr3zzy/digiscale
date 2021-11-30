@@ -11,34 +11,65 @@ function Navbar() {
     const [sidebar, setSidebar] = useState(false);
     const data = useSelector(state => state);
     const showSidebar = () => setSidebar(!sidebar);
+    const [hidenav, sethidenav] = useState(false)
 
-    console.log('data', data.selectedProduct.length);
+    console.log('data', data.Products.length);
+
+    const gotoScreen = (index) => {
+        console.log('hello', index);
+        if (index == 5) {
+            sethidenav(true);
+        } else {
+            sethidenav(false);
+        }
+    }
 
     return (
+
         <>
-            <div className='navbar'>
+            {
+                hidenav == false ?
+                    <div className='navbar'>
 
-                <div className="col-2 menu-bars">
-                    <Link to='#' className="menu-bar-Icon">
-                        <FaIcons.FaBars onClick={showSidebar} />
-                    </Link>
-                </div>
-                <div class="col-6 container justify-content-center">
+                        <div className="col-2 menu-bars">
+                            <Link to='#' className="menu-bar-Icon">
+                                <FaIcons.FaBars onClick={showSidebar} />
+                            </Link>
+                        </div>
+                        <div class="col-6 container justify-content-center">
 
-                    <button className='navbar-btn'>Self Destruct</button>
+                            <button className='navbar-btn'>Self Destruct</button>
 
-                </div>
-                <div className="col-2 shoppingBagDiv">
-                    <FaIcons.FaShoppingBasket size={30} color={'yellow'} />
-                    <label className="IconShoppingBaskit">{data.selectedProduct.length}</label>
+                        </div>
+                        <div className="col-2 shoppingBagDiv">
+                            <FaIcons.FaShoppingBasket size={30} color={'yellow'} />
+                            <label className="IconShoppingBaskit">{[data.Products].length}</label>
 
 
-                </div>
-                <div className="col-2 logoutDiv">
-                    <FaIcons.FaSignOutAlt size={30} color={'lightgreen'} />
-                </div>
+                        </div>
+                        <div className="col-2 logoutDiv">
+                            <FaIcons.FaSignOutAlt size={30} color={'lightgreen'} />
+                        </div>
 
-            </div>
+                    </div> :
+                    <div className='navbar'>
+                        <div className="col-2 menu-bars">
+                            <Link to='/Dashboard' className="menu-bar-Icon">
+                                <FaIcons.FaAngleLeft onClick={() => gotoScreen(1)} size={30} color={'green'} />
+                            </Link>
+                        </div>
+                        <div class="col-8 container justify-content-center">
+
+                            <button className='navbar-digiscaleDelevery-btn'>Set Location</button>
+
+                        </div>
+                        <div className="col-2 shoppingBagDiv">
+                            <FaIcons.FaShoppingBasket size={30} color={'yellow'} />
+                        </div>
+
+
+                    </div>
+            }
 
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                 <ul className='nav-menu-items' onClick={showSidebar}>
@@ -52,7 +83,7 @@ function Navbar() {
                     </li>
                     {SidebarData.map((item, index) => {
                         return (
-                            <li key={index} className={item.cName}>
+                            <li key={index} className={item.cName} onClick={(() => gotoScreen(index))}>
                                 <Link to={item.path}>
                                     {item.icon}
                                     <span>{item.title}</span>

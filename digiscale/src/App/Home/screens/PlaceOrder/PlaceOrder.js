@@ -70,9 +70,32 @@ const dataImage = [
         const [locationData, setLocationData] = useState(props.location.state.detail)
         const [price, setprice] = useState(props.location.state.price);
         const [buyProduct, setbuyProduct] = useState(false);
+        const [ProductsList, setProductsList] = useState([data.Products]);
+        const [priceData, setpriceData] = useState(ProductsList[0].price.replace("$", ""));
+
+
+        console.log("Products data", data.Products);
 
         const selectedValue = (value) => {
 
+        }
+
+        const addProduct = () => {
+            var price = ProductsList[0].price.replace("$", "")
+            var value1 = parseFloat(priceData);
+            var value2 = parseFloat(price);
+            var updatedprice = value1 + value2;
+            console.log('hello ', updatedprice);
+            setpriceData(updatedprice);
+        }
+
+        const minuesProduct = () => {
+            var price = ProductsList[0].price.replace("$", "")
+            var value1 = parseFloat(priceData);
+            var value2 = parseFloat(price);
+            var updatedprice = value1 - value2;
+            console.log('hello ', updatedprice);
+            setpriceData(updatedprice);
         }
 
         const TipDelevery = () => {
@@ -101,27 +124,35 @@ const dataImage = [
             </figure>
         ))
 
+        const productPurchased = ProductsList.map((product) => (
+            <div className="row col-12 flexWrapRow">
+                <div className="col-2 crossIcon" >
+                    <FaIcons.FaWindowClose size={30} color={'green'} />
+                </div>
+                <div className="col-4 imgLocationcard" >
+                    <img className="imgLocation" src={product.name} />
+                </div>
+                <div className="col-3 productNameCard">
+                    <div >{"$" + priceData}</div>
+                </div>
+                <div onClick={() => minuesProduct()} className="col-1 lessIcon" >
+                    <FaIcons.FaMinusCircle size={30} color={'red'} />
+                </div>
+                <div onClick={() => addProduct()} className="col-1 addIcon" >
+                    <FaIcons.FaPlusCircle size={30} color={'green'} />
+                </div>
+            </div >
+        )
+        )
+
         return (
             <div className="container-fluid mainContainer">
-                <div className="row col-12 flexWrapRow">
-                    <div className="col-2 crossIcon" >
-                        <FaIcons.FaWindowClose size={30} color={'green'} />
-                    </div>
-                    <div className="col-4 imgLocationcard" >
-                        <img className="imgLocation" src={locationData.name} />
-                    </div>
-                    <div className="col-3 productNameCard">
-                        <div >{locationData.price}</div><div>{locationData.phone}</div>
-                        <div>{locationData.rating}</div>
-                    </div>
-                    <div className="col-1 lessIcon" >
-                        <FaIcons.FaMinusCircle size={30} color={'red'} />
-                    </div>
-                    <div className="col-1 addIcon" >
-                        <FaIcons.FaPlusCircle size={30} color={'green'} />
-                    </div>
 
-                </div >
+                <div>
+                    {productPurchased}
+                </div>
+
+
                 <div className="col-12 flexWrapRow">
 
                     <div className="col-12 imgLocationcard priceDetail">
